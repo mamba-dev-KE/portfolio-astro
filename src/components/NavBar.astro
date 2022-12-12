@@ -1,4 +1,10 @@
 ---
+const navData: Array<"About" | "Project" | "Skills & Tech" | "Contacts"> = [
+  "About",
+  "Project",
+  "Skills & Tech",
+  "Contacts",
+];
 ---
 
 <header class="bg-lime-50 fixed top-0 right-0 left-0 backdrop-blur-sm">
@@ -19,11 +25,7 @@
     </div>
     <nav class="hidden sm:block">
       <ul class="flex gap-5 text-xl">
-        {
-          ["About", "Project", "Skills & Tech", "Contacts"].map((navItem) => (
-            <li class="cursor-pointer active:border border-black">{navItem}</li>
-          ))
-        }
+        {navData.map((navItem) => <li class="cursor-pointer">{navItem}</li>)}
       </ul>
     </nav>
   </div>
