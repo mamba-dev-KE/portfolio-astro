@@ -1,14 +1,32 @@
 ---
 ---
 
-<header>
-  <div class="logo">Joseph</div>
-  <nav>
-    <ul>
-      <li>About</li>
-      <li>Project</li>
-      <li>Skills & Tech</li>
-      <li>Contact</li>
-    </ul>
-  </nav>
+<header class="bg-lime-50 fixed top-0 right-0 left-0 backdrop-blur-sm">
+  <div class="flex justify-between items-center w-fluid h-16 mx-auto">
+    <div class="text-2xl font-bold flex gap-2 items-center">
+      <span>Joseph</span>
+      <svg
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        class="w-8 h-8 fill-green-300 stroke-slate-800"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z"
+        ></path>
+      </svg>
+    </div>
+    <nav class="hidden sm:block">
+      <ul class="flex gap-5 text-xl">
+        {
+          ["About", "Project", "Skills & Tech", "Contacts"].map((navItem) => (
+            <li class="cursor-pointer active:border border-black">{navItem}</li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
 </header>
+
+<style></style>
