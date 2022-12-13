@@ -8,10 +8,12 @@ module.exports = {
       },
       fontFamily: {
         titan: ["Titan One", "cursive"],
+        inter: ["Inter", "sans-serif"],
       },
       colors: {
         dark: "hsl(223, 9%, 14%)",
         light: "hsl(0, 0%, 68%)",
+        gold: "hsl(43, 84%, 68%)",
       },
     },
   },

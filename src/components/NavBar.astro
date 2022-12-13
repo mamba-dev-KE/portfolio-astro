@@ -1,31 +1,26 @@
 ---
-const navData: Array<"About" | "Project" | "Skills & Tech" | "Contacts"> = [
-  "About",
-  "Project",
-  "Skills & Tech",
-  "Contacts",
+const navData: Array<"Projects" | "Technologies"> = [
+  "Projects",
+  "Technologies",
 ];
 ---
 
 <header class="fixed top-0 right-0 left-0 backdrop-blur-sm">
   <div class="flex justify-between items-center w-fluid h-16 mx-auto">
     <div class="text-2xl font-bold flex gap-3 items-center">
-      <!-- <svg
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        class="w-9 h-9 fill-green-300 stroke-slate-800"
+      <span class="font-titan uppercase text-3xl text-white tracking-widest"
+        >Joseph</span
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z"
-        ></path>
-      </svg> -->
-      <span class="font-titan uppercase text-3xl text-white tracking-widest">Joseph</span>
     </div>
     <nav class="hidden sm:block">
-      <ul class="flex gap-5 text-xl">
-        {navData.map((navItem) => <li class="cursor-pointer">{navItem}</li>)}
+      <ul class="flex gap-5">
+        {
+          navData.map((navItem) => (
+            <li class="relative cursor-pointer font-inter font-bold text-xl hover:text-white transition-all duration-300">
+              {navItem}
+            </li>
+          ))
+        }
       </ul>
     </nav>
     <div class="flex gap-1 flex-col items-center">
@@ -35,3 +30,24 @@ const navData: Array<"About" | "Project" | "Skills & Tech" | "Contacts"> = [
     </div>
   </div>
 </header>
+
+<style>
+  li::after {
+    content: "";
+    width: 100%;
+    height: 0.2rem;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: hsl(43, 84%, 68%);
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+  li:hover::after {
+    display: block;
+    opacity: 1;
+  }
+</style>
