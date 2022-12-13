@@ -1,6 +1,8 @@
 ---
 import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
+import "../styles/reset.css";
+import "../styles/index.css";
 export interface Props {
   title: string;
 }
@@ -17,7 +19,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="bg-dark text-light">
     <NavBar />
     <slot />
     <Footer />
@@ -32,13 +34,5 @@ const { title } = Astro.props;
       #da62c4 30%,
       white 60%
     );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background-color: #f6f6f6;
-  }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
   }
 </style>

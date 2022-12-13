@@ -6,9 +6,13 @@ module.exports = {
       width: {
         fluid: "min(100% - 2rem, 110rem)",
       },
-	  fontFamily: {
-		
-	  }
+      fontFamily: {
+        titan: ["Titan One", "cursive"],
+      },
+      colors: {
+        dark: "hsl(223, 9%, 14%)",
+        light: "hsl(0, 0%, 68%)",
+      },
     },
   },
   plugins: [],
