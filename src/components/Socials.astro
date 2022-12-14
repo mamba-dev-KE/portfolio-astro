@@ -11,13 +11,13 @@ import twitter from "assets/images/twitter.svg";
 </div>
 <style>
   div {
-    filter: saturate(100%);
     background-image: linear-gradient(
       290deg,
-      hsl(51, 100%, 50%),
-      hsl(51, 100%, 50%) 20%,
-      hsl(0, 0%, 68%) 70%
+      var(--clr-gold),
+      var(--clr-gold) 20%,
+      var(--clr-light) 70%
     );
+    filter: contrast(75%) saturate(200%);
   }
   img {
     /* filter: blur(2px); */
